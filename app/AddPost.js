@@ -3,18 +3,18 @@ export const AddPost = () => {
 
     return (
         <div className={"p-6"}>
-            <div className={"mx-auto p-6 rounded-lg border-gray-500 border border-opacity-50 w-2/4 bg-white"}>
-                <form className={"flex justify-around items-baseline"}>
-                    <div className={"text-xl text-pink-600"}>
+            <div className={"mx-auto p-6 rounded-lg border-gray-500 border border-opacity-50 w-full max-w-[420px] bg-white sm:w-2/4"}>
+                <form className={""}>
+                    <div className={"text-xl text-pink-600 mb-3"}>
                         Add New Post ↗　
                     </div>
                     <div className={"flex flex-col items-end"}>
                         {
                             fields.map((item, i) => (
-                                <label className={"p-2 flex items-baseline"} key={i}>
+                                <label className={"p-2 flex items-baseline flex-col md:flex-row w-full max-w-[18.5rem]"} key={i}>
                                     {item.header}
                                     <textarea placeholder={item.des}
-                                              className={"bg-blue-50 ml-1.5 text-sm cursor-pointer outline-none focus:border border-blue-400 rounded-lg p-1.5"}/>
+                                              className={"w-full bg-blue-50 ml-1.5 text-sm cursor-pointer outline-none focus:border border-blue-400 rounded-lg p-1.5"}/>
                                 </label>
                             ))
                         }
