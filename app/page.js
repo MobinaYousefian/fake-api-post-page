@@ -1,5 +1,5 @@
-import {AddPost} from "@/app/AddPost";
-import {PostsGrid} from "@/app/PostsGrid";
+import {AddPost} from "@/app/Components/AddPost";
+import {PostsGrid} from "@/app/Components/PostsGrid";
 import {Suspense} from "react";
 import Loading from "@/app/loading";
 

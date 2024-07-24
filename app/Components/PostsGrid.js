@@ -25,9 +25,9 @@ export const PostsGrid = () => {
         <div className={"flex items-baseline justify-between flex-wrap"}>
             {
                 postList.map((item, i) => (
-                    <div key={i} className={"p-6 sm:w-[50%]"}>
+                    <div key={i} className={"p-6 w-full sm:w-[50%]"}>
                         <div className={"border rounded-lg bg-white"}>
-                            <div className={"text-sm sm:text-xl sm:px-3 bg-pink-600 text-white flex justify-between items-center p-1.5 rounded-lg"}>
+                            <div className={"text-sm sm:text-xl sm:px-3 bg-pink-600 text-white flex justify-between items-center p-2 rounded-lg"}>
                                 <span className={"font-bold w-[75%]"}>{item.title}</span>
                                 <span className={"text-xs sm:text-sm"}>user#{item.id}</span>
                             </div>
