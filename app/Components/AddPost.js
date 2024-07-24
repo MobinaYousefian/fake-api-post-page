@@ -24,7 +24,7 @@ export const AddPost = () => {
                 body: JSON.stringify({
                     title: headline,
                     body: description,
-                    userId: Math.random().toString(36).slice(2),
+                    userId: Math.floor(Math.random() * (100 - 10) + 10)
                 }),
                 headers : {
                     'Content-type': 'application/json; charset=UTF-8',
