@@ -20,7 +20,7 @@ export const AddPost = () => {
     async function PostRequest () {
         try {
             const response = await fetch("https://jsonplaceholder.typicode.com/posts",{
-                method: "post",
+                method: "POST",
                 body: JSON.stringify({
                     title: headline,
                     body: description,
