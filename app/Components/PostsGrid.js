@@ -43,7 +43,7 @@ export const PostsGrid = () => {
                         <div className={"border rounded-lg bg-white"}>
                             <div className={"text-sm sm:text-xl sm:px-3 bg-cyan-700 text-white flex justify-between items-center p-2 rounded-lg"}>
                                 <span className={"font-bold w-[75%]"}>{item.title}</span>
-                                <span className={"text-xs sm:text-sm"}>user#{item.id}</span>
+                                <span className={"text-xs sm:text-sm"}>user#{item.userId}</span>
                             </div>
                             <div className={"p-3 rounded-b-lg text-xs sm:text-sm"}>
                                 {item.body}
