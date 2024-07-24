@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "@/redux/ReduxProvider";
+import dynamic from "next/dynamic";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,10 +11,17 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const DynamicModals = dynamic(() => import("./modal/Modals"), {
+    ssr: false
+  })
+
   return (
     <html lang="en">
     <ReduxProvider>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      {children}
+      <DynamicModals/>
+      </body>
     </ReduxProvider>
     </html>
   );

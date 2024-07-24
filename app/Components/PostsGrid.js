@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {setPost} from "@/redux/features/postSlice";
 import Image from "next/image";
+import {activeStatus} from "@/redux/features/statusSlice";
 
 export const PostsGrid = () => {
     const dispatch = useDispatch();
@@ -28,10 +29,12 @@ export const PostsGrid = () => {
               method: "DELETE"
           });
           if (response.status === 200) {
-              dispatch(setPost(postList.filter((post) => post.id !== id)))
+              dispatch(setPost(postList.filter((post) => post.id !== id)));
+              dispatch(activeStatus({status: "SUCCESS", req: "delete"}));
           }
       }  catch (error) {
           console.log(error);
+          dispatch(activeStatus({status: "Error", req: "delete"}));
       }
     };
 
