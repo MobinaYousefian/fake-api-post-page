@@ -5,7 +5,7 @@ import Loading from "@/app/loading";
 
 export default function Home() {
   return (
-      <main className={"bg-blue-50"}>
+      <main className={"bg-neutral-200"}>
           <AddPost/>
           <Suspense fallback={<Loading/>}>
               <PostsGrid/>

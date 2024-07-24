@@ -50,7 +50,7 @@ export const AddPost = () => {
         <div className={"p-6"}>
             <div className={"mx-auto p-6 rounded-lg border-gray-500 border border-opacity-50 w-full max-w-[420px] bg-white sm:w-2/4"}>
                 <form onSubmit={handleSubmit}>
-                    <div className={"text-xl text-pink-600 mb-3"}>
+                    <div className={"text-xl text-sky-600 mb-3"}>
                         Add New Post ↗　
                     </div>
                     <div className={"flex flex-col items-end"}>
@@ -61,7 +61,7 @@ export const AddPost = () => {
                             handleChangeTitle={handleChangeTitle}
                             inputRef={inputRef}
                         />
-                        <button type={"submit"} className={"mt-2 duration-100 text-white bg-pink-600 rounded-lg p-2 px-2.5 focus:bg-pink-400 hover:bg-pink-500"}>
+                        <button type={"submit"} className={"mt-2 duration-100 text-white bg-cyan-700 rounded-lg p-2 px-2.5 focus:bg-cyan-500 hover:bg-cyan-600"}>
                             Publish
                         </button>
                     </div>
