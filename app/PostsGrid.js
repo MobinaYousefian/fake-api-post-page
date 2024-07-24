@@ -1,14 +1,17 @@
 "use client"
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {setPost} from "@/redux/features/postSlice";
 
 export const PostsGrid = () => {
-    const [post, setPost] = useState([]);
+    const dispatch = useDispatch();
+    const {postList} = useSelector(state => state.post);
 
     const getPosts = async () => {
         try {
             const response = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=10");
             const data = await response.json();
-            setPost(data);
+            dispatch(setPost(data));
         } catch (error) {
             console.log(error);
         }
@@ -21,7 +24,7 @@ export const PostsGrid = () => {
     return (
         <div className={"flex items-baseline justify-between flex-wrap"}>
             {
-                post.map((item, i) => (
+                postList.map((item, i) => (
                     <div key={i} className={"p-6 sm:w-[50%]"}>
                         <div className={"border rounded-lg bg-white"}>
                             <div className={"text-sm sm:text-xl sm:px-3 bg-pink-600 text-white flex justify-between items-center p-1.5 rounded-lg"}>
